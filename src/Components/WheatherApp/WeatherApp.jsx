@@ -14,7 +14,7 @@ import humidity_icon from "../Assests/Assets/humidity.png";
 function WeatherApp() {
 let api_key ="b1e2aded321823931046c3903af7adb0";
 
-const [wicon,setWicon] = useState(cloud_icon)
+const [wicon,setWicon] = useState(cloud_icon);
 
 const search = async () =>{
         const element =document.getElementsByClassName("cityInput")
@@ -83,7 +83,7 @@ const search = async () =>{
         <div className="weather-image">
             <img src={wicon} alt="" />
         </div>
-        <div className="weather-temp">28n°c</div>
+        <div className="weather-temp">28°c</div>
         <div className="weather-location">Pune</div>
         <div className="data-container">
             <div className="element">
