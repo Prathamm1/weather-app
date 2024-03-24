@@ -74,11 +74,21 @@ const search = async () =>{
   return (
     <div className='container'>
         <div className="top-bar">
-            <input type="text" className="cityInput" placeholder='Search' />
+            <input
+             type="text"
+             className="cityInput"
+             placeholder='Search'
+             onKeyPress={(e) => {
+               if(e.key === 'Enter') {
+                 search();
+               }
+             }}
+           />
             <div className="search-icon" onClick={()=>{search()}}>
                 <img src={search_icon} alt="" />
             </div>
         </div>
+        
 
         <div className="weather-image">
             <img src={wicon} alt="" />
